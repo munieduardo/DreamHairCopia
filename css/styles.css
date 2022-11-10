@@ -15,7 +15,32 @@ html {
 
 #grid{
     display: grid;
+    grid-template-areas: 
+    "cabecera cabecera cabecera"
+    "cabecera cabecera cabecera"
+    "header header header"
+    "info info info"
+    "footer footer footer";
+    grid-template-columns: repeat(3,1fr);
 }
+#nav-flex{
+    grid-area: header;
+}
+
+nav{
+    grid-area: nav;
+}
+
+#informacion{
+    grid-area: info;
+}
+
+footer{
+    grid-area: footer;
+}
+
+
+
 
 ul{
     list-style-type: none;
@@ -24,7 +49,14 @@ ul{
 .portada{
     width: 100%;
     height: 100%;
-    padding-bottom: 15rem;
+    grid-area: cabecera;
+    margin-bottom: 15rem;
+    z-index: 1;
+}
+
+.img-portada{
+    width: 100%;
+    height: 100%;
 }
 
 #nav-flex{
@@ -37,7 +69,7 @@ ul{
     position: sticky;
     top: 0;
     font-size: 1.5rem;
-    z-index: 1;
+    z-index: 2;
 }
 
 .lista-flex{
